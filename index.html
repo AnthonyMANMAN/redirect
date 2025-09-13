@@ -35,18 +35,56 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+        
+        /* Force vertical layout for Open Graph preview */
+        .og-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .og-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            order: 1;
+        }
+        
+        .og-description {
+            font-size: 16px;
+            margin-bottom: 20px;
+            order: 2;
+        }
+        
+        .og-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            order: 3;
+        }
     </style>
 </head>
 <body>
+    <!-- This is what users see when they visit directly -->
     <h1>🎮 Joining PLS DONATE Server...</h1>
     <div class="loading">⚡</div>
     <p>Redirecting you to the best donation server!</p>
-    <p><small>If nothing happens, <a href="https://www.roblox.com/games/8737602449/PLS-DONATE" style="color: #00ff00;">click here</a></small></p>
+    <p><small>If nothing happens, <a href="https://www.roblox.com/share?code=93518d12975c8547bc242ca718f9ddbc&type=Server" style="color: #00ff00;">click here</a></small></p>
+
+    <!-- Hidden container for Open Graph structure (won't affect Telegram preview) -->
+    <div class="og-container" style="display: none;">
+        <div class="og-title">🎮 PLS DONATE - Join My Server!</div>
+        <div class="og-description">Best donation server in Roblox! Join now and start earning robux with other players!</div>
+        <img class="og-image" src="preview.jpg" alt="PLS DONATE Server Preview">
+    </div>
 
     <script>
         // Redirect after 2 seconds
         setTimeout(() => {
-            window.location.href = "https://www.roblox.com/games/8737602449/PLS-DONATE";
+            window.location.href = "https://www.roblox.com/share?code=93518d12975c8547bc242ca718f9ddbc&type=Server";
         }, 2000);
     </script>
 </body>
