@@ -1,167 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Exact metadata to match official Roblox PLS DONATE links -->
-    <title>Roblox</title>
-    <meta name="description" content="Check out PLS DONATE 🍃. It's one of the millions of unique, user-generated 3D experiences created on Roblox. 🍃 PLS DONATE is a game where you can raise Robux or donate to other players!">
-    <meta name="author" content="Roblox">
-    <meta name="keywords" content="Roblox, PLS DONATE, Private Server, Game">
-    
-    <!-- Critical: These exact headers make Telegram recognize it -->
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <!-- Open Graph - Mirror official Roblox format exactly -->
-    <meta property="og:site_name" content="Roblox">
-    <meta property="og:title" content="Join Private Server">
-    <meta property="og:description" content="Check out PLS DONATE 🍃. It's one of the millions of unique, user-generated 3D experiences created on Roblox. 🍃 PLS DONATE is a game where you can raise Robux or donate to other players!">
-    <meta property="og:image" content="https://AnthonyMANMAN.github.io/redirect/previews.png/?v=2">
-    <meta property="og:url" content="https://AnthonyMANMAN.github.io/redirect/?v=2">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    
-    <!-- Image specifications for larger Telegram preview -->
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:alt" content="PLS DONATE">
-    
-    <!-- Twitter cards (Telegram checks these too) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@Roblox">
-    <meta name="twitter:title" content="Join Private Server">
-    <meta name="twitter:description" content="Check out PLS DONATE 🍃. It's one of the millions of unique, user-generated 3D experiences created on Roblox. 🍃 PLS DONATE is a game where you can raise Robux or donate to other players!">
-    <meta name="twitter:image" content="https://AnthonyMANMAN.github.io/redirect/previews.png/?v=2">
-    
-    <!-- Additional Roblox-like metadata -->
-    <meta name="theme-color" content="#00A2FF">
-    <meta name="robots" content="index,follow">
-    <link rel="canonical" href="https://AnthonyMANMAN.github.io/redirect/">
-    
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: #393B3D;
-            color: #FFFFFF;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-        }
-        
-        .container {
-            background: #2C2F33;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            max-width: 400px;
-            width: 90%;
-        }
-        
-        .roblox-logo {
-            color: #00A2FF;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        
-        .game-title {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #FFFFFF;
-        }
-        
-        .loading-spinner {
-            animation: spin 1s linear infinite;
-            font-size: 30px;
-            margin: 20px 0;
-            display: inline-block;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        .status-text {
-            color: #B3B3B3;
-            margin: 15px 0;
-        }
-        
-        .backup-link {
-            color: #00A2FF;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        
-        .backup-link:hover {
-            text-decoration: underline;
-        }
-        
-        .progress-bar {
-            width: 100%;
-            height: 4px;
-            background: #444;
-            border-radius: 2px;
-            margin: 20px 0;
-            overflow: hidden;
-        }
-        
-        .progress-fill {
-            height: 100%;
-            background: #00A2FF;
-            width: 0%;
-            animation: progress 2s ease-in-out forwards;
-        }
-        
-        @keyframes progress {
-            0% { width: 0%; }
-            100% { width: 100%; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Canvas Mirror</title>
+  <style>
+    body { margin: 0; background: #000; }
+    canvas { display: block; }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="roblox-logo">ROBLOX</div>
-        <div class="game-title">🍃 PLS DONATE</div>
-        <div class="loading-spinner">⚡</div>
-        <div class="status-text">Joining Private Server...</div>
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
-        </div>
-        <p class="status-text"><small>Redirecting you now...</small></p>
-        <p><small><a href="https://www.roblox.com/share?code=93518d12975c8547bc242ca718f9ddbc&type=Server" class="backup-link">Click here if nothing happens</a></small></p>
-    </div>
-    
-    <script>
-        // Show loading for realistic effect
-        let dots = 0;
-        const statusElement = document.querySelector('.status-text');
-        const originalText = 'Joining Private Server';
-        
-        const loadingInterval = setInterval(() => {
-            dots = (dots + 1) % 4;
-            statusElement.textContent = originalText + '.'.repeat(dots);
-        }, 500);
-        
-        // Redirect after 2 seconds
-        setTimeout(() => {
-            clearInterval(loadingInterval);
-            statusElement.textContent = 'Redirecting...';
-            window.location.href = "https://www.roblox.com/share?code=93518d12975c8547bc242ca718f9ddbc&type=Server";
-        }, 2000);
-        
-        // Fallback redirect in case the first one fails
-        setTimeout(() => {
-            window.location.replace("https://www.roblox.com/share?code=93518d12975c8547bc242ca718f9ddbc&type=Server");
-        }, 3000);
-    </script>
+  <canvas id="layer0" width="800" height="600"></canvas>
+
+  <script>
+    // Your drawing logic on layer0 goes here first
+    const layer0 = document.getElementById('layer0');
+    const ctx0 = layer0.getContext('2d');
+    // Example: draw something so the mirror has content
+    ctx0.fillStyle = 'steelblue';
+    ctx0.fillRect(50, 50, 200, 200);
+
+    // Your mirror code
+    const mirror = document.createElement('canvas');
+    mirror.width = layer0.width;
+    mirror.height = layer0.height;
+    mirror.style.cssText = 'position:fixed;top:0;left:0;z-index:99999;border:2px solid red;pointer-events:none;';
+    document.body.appendChild(mirror);
+    const ctx = mirror.getContext('2d');
+
+    (function draw() {
+      ctx.clearRect(0, 0, mirror.width, mirror.height);
+      ctx.drawImage(layer0, 0, 0);
+      requestAnimationFrame(draw);
+    })();
+  </script>
 </body>
 </html>
