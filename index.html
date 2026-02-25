@@ -2,36 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Canvas Mirror</title>
+  <title>Mirror</title>
   <style>
-    body { margin: 0; background: #000; }
-    canvas { display: block; }
+    * { margin: 0; padding: 0; }
+    body { background: #000; overflow: hidden; }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      display: block;
+    }
   </style>
 </head>
 <body>
-  <canvas id="layer0" width="800" height="600"></canvas>
-
-  <script>
-    // Your drawing logic on layer0 goes here first
-    const layer0 = document.getElementById('layer0');
-    const ctx0 = layer0.getContext('2d');
-    // Example: draw something so the mirror has content
-    ctx0.fillStyle = 'steelblue';
-    ctx0.fillRect(50, 50, 200, 200);
-
-    // Your mirror code
-    const mirror = document.createElement('canvas');
-    mirror.width = layer0.width;
-    mirror.height = layer0.height;
-    mirror.style.cssText = 'position:fixed;top:0;left:0;z-index:99999;border:2px solid red;pointer-events:none;';
-    document.body.appendChild(mirror);
-    const ctx = mirror.getContext('2d');
-
-    (function draw() {
-      ctx.clearRect(0, 0, mirror.width, mirror.height);
-      ctx.drawImage(layer0, 0, 0);
-      requestAnimationFrame(draw);
-    })();
-  </script>
+  <iframe src="https://gameofbombs.com/#/" allowfullscreen></iframe>
 </body>
 </html>
